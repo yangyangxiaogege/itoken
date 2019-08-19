@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+  itoken-zuul:
+    image: 192.168.78.129:5000/itoken-zuul
+    container_name: itoken-zuul
+    restart: always
+    networks:
+      - zuul-network
+    ports:
+      - 8769:8769
+
+networks:
+  zuul-network:

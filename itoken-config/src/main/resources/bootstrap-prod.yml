@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: itoken-config
+  boot:
+    admin:
+      client:
+        url: http://192.168.78.131:8084
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: http://192.168.78.129:8080/itoken/itoken-config.git
+          search-paths: respo
+          username: yangyangxiaogege
+          password: loveyxy2027.
+  zipkin:
+    base-url: http://192.168.78.131:9411
+
+server:
+  port: 8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.78.131:8761/eureka/,http://192.168.78.131:8861/eureka/,http://192.168.78.131:8961/eureka/
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info
