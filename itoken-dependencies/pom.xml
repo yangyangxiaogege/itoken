@@ -37,7 +37,7 @@
         <lombok.version>1.16.20</lombok.version>
 
         <!-- json -->
-        <jackson.version>2.9.8</jackson.version>
+        <jackson.version>2.12.6.1</jackson.version>
     </properties>
 
     <!--依赖管理-->
